@@ -1,0 +1,17 @@
+[
+	{
+		"id": 10,
+		"event": "teleport",
+		"target": 88
+	},
+	{
+		"id": 15,
+		"event": "mystery",
+		"target": -1
+	},
+	{
+		"id": 80,
+		"event": "teleport",
+		"target": 50
+	}
+]

@@ -1,0 +1,16 @@
+Date		Version		Description
+1/2/2018	0.0		project started. Added basic structure for the game.
+7/2/2018	0.1		Added temp main screen. Added Button for starting game.
+9/2/2018	0.2		Added frame for main, character selection and game. Added basic map for the game.
+12/2/2018	0.3		Added JSON file to store board data. 
+				Can load JSON data to create marks for teleport (snakes & ladders) and mystery tile.
+				Refactor the display of tiles. Display player and simulate movement. 
+				Added temporary final scene. Player now react to snakes and ladders.
+13/2/2018	0.4		Can toggle map.
+11/3/2018	0.5		Fixed map toggle button. Added temporary rect for player image with no map.
+12/3/2018	0.6		Added slot for displaying player's hand. Correctly implement hitbox in an arc-shape.
+				Added testing hand to move.
+14/3/2018	0.7		Added hitbox for draw pile and discard pile. Added cards.
+16/3/2018	0.8		Implemented draw and discard. now displaying hp bar and armor point. Modify layout
+				and color. Added end turn effect (remove armor).
+28/3/2018	0.9		Added boss intent indication, boss action. Discard all when end turn.
