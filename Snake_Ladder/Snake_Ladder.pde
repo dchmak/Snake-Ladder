@@ -47,6 +47,7 @@ void draw() {
   text(str(frameRate), 0, 0, 50, 50);
 }
 
+
 // reset() initialize the data.
 // effects: mutate board, player, selecting and showMap
 //          read external file
@@ -89,7 +90,7 @@ void reset() {
 
   // set does not show map as default
   showMap = false;
-  
+
   boss = new Boss();
 }
 

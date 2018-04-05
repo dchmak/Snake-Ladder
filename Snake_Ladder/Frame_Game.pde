@@ -1,8 +1,11 @@
 boolean showMap = false; // control toggle of map
 
 // gameFrame() draws the frame for the game
-void gameFrame() {
-  background(LIGHTGREY);
+void gameFrame() {  
+  if (gameBackgroundImg == null) {
+    gameBackgroundImg = loadImage("game_back.png");
+  }
+  image(gameBackgroundImg, 0, 0, width, height);
 
   // add Hitbox to toggle the map
   Hitbox showMapHB = new Hitbox(width-100, MARGIN, 50, 50, "Map");
@@ -52,6 +55,11 @@ void gameFrame() {
     // display the player    
     player.display();
 
+    // display cell number
+    textAlign(CENTER, CENTER);
+    fill(BLACK);
+    text(str(player.pos), width/2, height/2);
+
     // add Hitbox to end turn
     Hitbox endTurnHB = new Hitbox(END_TURN_ATT, "End Turn");
     endTurnHB.debug();
@@ -95,7 +103,7 @@ void gameFrame() {
     }
     mouse.popMatrix();
     // all transformation is reverted    
-    
+
     // add Hitbox for the drawPile
     Hitbox drawPileHB = new Hitbox(DRAW_PILE_ATT, "Draw Pile");
     drawPileHB.debug();

@@ -1,7 +1,8 @@
 // Player create the player (duh)
 class Player {
-  int pos, hp, maxHp, armor;
+  int pos, hp, maxHp, armor, type;
   IntList deck, drawPile, hand, discardPile;
+  PImage img;
 
   // constructor
   Player() {
@@ -9,10 +10,19 @@ class Player {
     hp = INIT_MAX_HP;
     maxHp = INIT_MAX_HP;
     armor = 0;
-    deck = STARTING_DECK;
-    drawPile = STARTING_DECK;
+    deck = A_STARTING_DECK;
+    drawPile = A_STARTING_DECK;
     hand = new IntList();
     discardPile = new IntList();
+    
+    switch (type) {
+      case TYPE_A:
+        img = loadImage("A.png");
+        break;
+      default:
+        println("unknown type");
+        exit();
+    }
   }
 
   // show information when map is on
@@ -25,10 +35,7 @@ class Player {
 
   // show information when map is off
   void display() {
-    fill(BLUE);
-    rect((width - PLAYER_IMAGE_WIDTH)/2, (height - PLAYER_IMAGE_HEIGHT)/2, PLAYER_IMAGE_WIDTH, PLAYER_IMAGE_HEIGHT);
-    fill(BLACK);
-    text(str(pos), (width - PLAYER_IMAGE_WIDTH)/2, (height - PLAYER_IMAGE_HEIGHT)/2, PLAYER_IMAGE_WIDTH, PLAYER_IMAGE_HEIGHT);
+    image(img, PLAYER_IMAGE_X, PLAYER_IMAGE_Y, PLAYER_IMAGE_WIDTH, PLAYER_IMAGE_HEIGHT);
 
     // display hp
     fill(DARKGREY);

@@ -28,7 +28,7 @@ class Hitbox {
   
   // show the area of hitbox and str
   void debug() {
-    noStroke();
+    stroke(0);
     color c = get(this.x + w/2, this.y + h/2);
     color anti = color(255 - red(c), 255 - green(c), 255 - blue(c));
 

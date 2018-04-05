@@ -34,8 +34,10 @@ final int TILE_LENGTH = 70;
 final int BORDER_WIDTH_LR = (SCREEN_WIDTH - BOARD_WIDTH * TILE_WIDTH) / 2;
 final int BORDER_WIDTH_TB = (SCREEN_LENGTH - BOARD_LENGTH * TILE_LENGTH) / 2;
 
-final int PLAYER_IMAGE_WIDTH = 100;
-final int PLAYER_IMAGE_HEIGHT = 160;
+final int PLAYER_IMAGE_WIDTH = 150;
+final int PLAYER_IMAGE_HEIGHT = 250;
+final int PLAYER_IMAGE_X = (SCREEN_WIDTH - PLAYER_IMAGE_WIDTH) / 4;
+final int PLAYER_IMAGE_Y = 2 * (SCREEN_LENGTH - PLAYER_IMAGE_HEIGHT) / 3;
 final int PLAYER_ICON_RADIUS = 20;
 
 final int CARD_WIDTH = 100;
@@ -51,20 +53,25 @@ final float CARD_ANGLE = tan(float(CARD_WIDTH) / (2 * CARD_SLOT_ARC_RAD)) * 2;
 
 final int DISCARD_PILE_ATT[] = {MARGIN, SCREEN_LENGTH - MARGIN - CARD_HEIGHT, 
   CARD_WIDTH, CARD_HEIGHT};
-  
+
 final int DRAW_PILE_ATT[] = {SCREEN_WIDTH - MARGIN - CARD_WIDTH, 
   SCREEN_LENGTH - MARGIN - CARD_HEIGHT, 
   CARD_WIDTH, CARD_HEIGHT};
-  
+
 final int HP_ATT[] = {MARGIN, MARGIN, 400, 40};
 final int ARMOR_ATT[] = {MARGIN, MARGIN + HP_ATT[3], 400, 40};
 
 final int END_TURN_ATT[] = {SCREEN_WIDTH - 100, SCREEN_LENGTH/2 - 70, 100, 70};
 
+final int CELL_DISPLAY_X = 370;
+final int CELL_DISPLAY_Y = 280;
+final int CELL_DISPLAY_WIDTH = 60;
+final int CELL_DISPLAY_HEIGHT = 40;
 
 // Player
 final int INIT_MAX_HP = 100;
-final IntList STARTING_DECK = new IntList(1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3);
+final int TYPE_A = 0;
+final IntList A_STARTING_DECK = new IntList(1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3);
 
 // Card
 final int STRIKE = 1;

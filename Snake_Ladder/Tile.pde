@@ -46,6 +46,8 @@ class Tile {
         //debug();
       }
     }
+    
+    strokeWeight(1);
   }
 
   void debug() {

@@ -5,11 +5,8 @@ int selecting = -1; // store character selection
 void charSelFrame() {
   // change background color according to the selection
   switch(selecting) {
-  case 0:
+  case TYPE_A:
     background(RED);
-    break;
-  case 1:
-    background(GREEN);
     break;
   default:
     background(WHITE);
@@ -26,11 +23,12 @@ void charSelFrame() {
   }
 
   // add Hitbox for selecting character A
-  Hitbox charSelAHB = new Hitbox(550, 500, 100, 100, "A"); // A will change
+  Hitbox charSelAHB = new Hitbox(550, 500, 100, 100, "A");
   charSelAHB.debug();
   if (charSelAHB.hover(mouseX, mouseY)) {
     if (mousePressed) {
-      selecting = 0;
+      selecting = TYPE_A;
+      player.type = TYPE_A;
     }
   }
 

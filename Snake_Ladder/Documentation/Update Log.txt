@@ -14,3 +14,4 @@ Date		Version		Description
 16/3/2018	0.8		Implemented draw and discard. now displaying hp bar and armor point. Modify layout
 				and color. Added end turn effect (remove armor).
 28/3/2018	0.9		Added boss intent indication, boss action. Discard all when end turn.
+4/4/2018	0.10		Added more graphics (this time I created them myself).
