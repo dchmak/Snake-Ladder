@@ -1,5 +1,9 @@
 // Images for main frame
 PImage mainImg; 
 
-// Images for game fram
+// Images for Character Icon
+PImage AIconImg;
+
+// Images for game frame
 PImage gameBackgroundImg;
+PImage AImg;

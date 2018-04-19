@@ -23,8 +23,9 @@ void charSelFrame() {
   }
 
   // add Hitbox for selecting character A
-  Hitbox charSelAHB = new Hitbox(550, 500, 100, 100, "A");
-  charSelAHB.debug();
+  Hitbox charSelAHB = new Hitbox(550, 500, 100, 100, "A", AIconImg);
+  //charSelAHB.debug();
+  charSelAHB.show();
   if (charSelAHB.hover(mouseX, mouseY)) {
     if (mousePressed) {
       selecting = TYPE_A;

@@ -17,7 +17,7 @@ class Player {
     
     switch (type) {
       case TYPE_A:
-        img = loadImage("A.png");
+        img = AImg;
         break;
       default:
         println("unknown type");

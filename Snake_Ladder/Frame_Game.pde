@@ -2,9 +2,6 @@ boolean showMap = false; // control toggle of map
 
 // gameFrame() draws the frame for the game
 void gameFrame() {  
-  if (gameBackgroundImg == null) {
-    gameBackgroundImg = loadImage("game_back.png");
-  }
   image(gameBackgroundImg, 0, 0, width, height);
 
   // add Hitbox to toggle the map

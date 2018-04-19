@@ -20,6 +20,7 @@ void settings() {
 
 // setup() initialize the data.
 void setup() {
+  loadImg();
   reset();
 }
 
@@ -48,9 +49,16 @@ void draw() {
 }
 
 
+// loadImg() loads all images.
+void loadImg() {
+  mainImg = loadImage("Image/Main/mainTEMP.png");
+  AIconImg = loadImage("Image/CharSel/A_Icon.png");
+  gameBackgroundImg = loadImage("Image/InGame/game_back.png");
+  AImg = loadImage("Image/InGame/A.png");
+}
+
+
 // reset() initialize the data.
-// effects: mutate board, player, selecting and showMap
-//          read external file
 void reset() {
   // initialize the board
   board = new Tile[BOARD_SIZE];

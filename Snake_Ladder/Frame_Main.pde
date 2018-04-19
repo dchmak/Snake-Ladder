@@ -1,9 +1,5 @@
 // mainFrame() draws the main frame
 void mainFrame() {  
-  // load background image
-  if (mainImg == null) {
-    mainImg = loadImage("mainTEMP.png");
-  }
   image(mainImg, 0, 0);
 
   // add Hitbox to go to character selection
